@@ -1,0 +1,76 @@
+a.navbar-brand.navbar-link {
+    margin: 0 auto;
+}
+
+div.row {
+}
+
+h3.text-center.text-muted {
+    padding: 0 10px;
+}
+
+body {
+}
+
+body {
+}
+
+i.material-icons {
+    margin-left: 8px;
+    display: inline-block;
+}
+
+i.fa.fa-cloud-upload {
+    padding: 10px;
+}
+
+input.form-control {
+    width: 68%;
+}
+
+h4.text-center.text-muted {
+    margin-top: 100px;
+}
+
+#filename {
+    width: 75%;
+    float: left;
+}
+
+#uploadBtn {
+    width: 45%;
+    font-size: large;
+    margin-top: 26px;
+}
+
+#subtitle {
+    margin: 0;
+    font-size: x-large;
+}
+
+h1#heading.text-center {
+}
+
+a#gallery {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: large;
+    text-decoration: none;
+}
+
+#browse{
+    float: right;
+    margin: 0;
+    height: 46px;
+    width: 25%;
+    display: block;
+    padding: 18px 10px;
+    font-size: 19px;
+    line-height: 0.3;
+    color: #fff;
+}
+
+
+

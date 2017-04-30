@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Material-Card.css">
+    <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
+</head>
+
+<body onload="display()">
+    <h1 class="text-center" id="heading">WickerLabs Image uploader</h1>
+    <h4 class="text-center text-muted" id="subtitle">This platform was created for educational purposes.</h4>
+    <div class="login-card">
+        <h4 class="text-center text-success" id="status" style="display: none;">Image uploaded Successfully</h4>
+        <p class="profile-name-card"> </p>
+        <form action="upload.php" method="post" enctype="multipart/form-data" class="form-signin">
+            <div class="row">
+                <input class="form-control" type="text" readonly="" placeholder="No image selected" id="filename">
+                <label class="btn btn-primary btn-xs" id="browse">
+                    Browse
+                    <input accept="image/*" type="file" name="imageFile" style="display: none;" onchange="$('#filename').val($(this).val().substring($(this).val().lastIndexOf('\\')+1));">
+                </label>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" id="uploadBtn">Upload Image</button>
+                <a href="uploads" id="gallery">View image gallery</a></div>
+        </form>
+    </div>
+    <h4 class="text-center text-muted">Copyright © 2017 Wickerlabs. All Rights Reserved. &nbsp; </h4>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function display() {
+            var url = window.location.href.split("?");
+            if(url[1].toLowerCase() == "s=1"){
+                document.getElementById('status').style.display = 'inherit';
+            } else if(url[1].toLowerCase() == "s=0"){
+                document.getElementById('status').style.display = 'inherit';
+                document.getElementById('status').style.color = '#fc4f59';
+                document.getElementById('status').innerHTML = 'Failed to upload image, try again.';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
